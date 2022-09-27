@@ -175,7 +175,8 @@ int main(int argc, char *argv[]) { }" HAVE_NULLABLE)
 
 test_big_endian(WORDS_BIGENDIAN)
 
-find_package(ZLIB 1.1.2 REQUIRED)
+include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
+find_package(zlib REQUIRED CONFIG)
 
 if(ENABLE_BZIP2)
   find_package(BZip2)
